@@ -10,9 +10,6 @@
     margin-top: 4rem;
   }
 
-  @media (min-width: $desktop-xl-width) {
-
-  }
 
   &__title {
     margin-bottom: 2px;
@@ -20,14 +17,6 @@
     color: $text-grey;
     font-size: 3.1rem;
     text-transform: uppercase;
-
-    @media (min-width: $tablet-width) {
-
-    }
-
-    @media (min-width: $desktop-lg-width) {
-
-    }
 
     @media (min-width: $desktop-xl-width) {
       font-size: 5.6rem;

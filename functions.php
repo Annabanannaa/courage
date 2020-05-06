@@ -59,9 +59,9 @@
   register_nav_menu('main_menu', __('Главное меню', 'Courage'));
 
   // создаем миниатюру
-  add_image_size( '100x100', 100, 100, true );
+  add_image_size( '88x109', 88, 109, true );
   add_image_size( '120x100', 120, 100, true );
-  add_image_size( '255x200', 255, 200, true );
+  add_image_size( '210x261', 210, 261, true );
   add_image_size( '255x255', 255, 255, true );
   add_image_size( '255x400', 255, 400, true );
   add_image_size( '540x340', 540, 340, true );
@@ -119,5 +119,4 @@
     $classes[] = 'main-nav__item';
     return $classes;
   }
-
 ?>

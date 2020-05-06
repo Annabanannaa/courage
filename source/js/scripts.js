@@ -25,33 +25,38 @@ $(document).ready(function () {
       prevEl: '.callboard__prev',
     },
   });
+  console.log($('.js-desc-page'));
+  if ($('.js-desc-page').length) {
+    // фон афиши
+    var galleryTop = new Swiper('.js-desc-page', {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      effect: 'fade',
+      allowTouchMove: false,
+      // cssMode: true,
 
-  // фон афиши
-  var galleryTop = new Swiper('.js-desc-page', {
-    spaceBetween: 10,
-    slidesPerView: 1,
-    effect: 'fade',
-    allowTouchMove: false,
-    // cssMode: true,
-
-    fadeEffect: {
-      crossFade: true
-    },
-
-    thumbs: {
-      swiper: callboardThumbs
-    },
-
-    on: {
-      slideChange: function () {
-
-        // выбор картинки со слайда на фон
-        // console.log($('.js-page-main'))
-        // console.log($(".js-desc-page-item").get(this.activeIndex).dataset.imgPath);
-        $('.js-page-main').css('background-image', 'url(' + $(".js-desc-page-item").get(this.activeIndex).dataset.imgPath + ')');
+      fadeEffect: {
+        crossFade: true
       },
-    },
-  });
+
+      thumbs: {
+        swiper: callboardThumbs
+      },
+
+      on: {
+        slideChange: function () {
+
+          // выбор картинки со слайда на фон
+
+          history.pushState('','', $('.js-callboard-slide').get(this.activeIndex).dataset.test)
+          $('.js-page-main').css('background-image', 'url(' + $(".js-desc-page-item").get(this.activeIndex).dataset.imgPath + ')');
+        },
+      },
+    });
+
+    galleryTop.slideTo($('[data-test="' + window.location + '"]').data('index'))
+  }
+
 
 
   // меню мобила
@@ -102,5 +107,5 @@ $(document).ready(function () {
   });
 
 // добалвяем класс в меню a
-  $('.js-list a').addClass('main-nav__link');
+  $('.js-list ul li a').addClass('main-nav__link');
 });

@@ -1,6 +1,6 @@
 <section class="menu">
   <div>
-    <a class="page-header__logo-link" href="">
+    <a class="page-header__logo-link" href="<?php echo home_url(); ?>">
       <picture>
         <source media="(min-width: 768px)"
                 srcset="<?php echo get_template_directory_uri(); ?>/source/img/logo-tablet.png">
@@ -10,7 +10,7 @@
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle js-toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper main-nav__wrapper--open">
+      <div class="main-nav__wrapper main-nav__wrapper--open js-list">
 
         <?php
           wp_nav_menu( array(
@@ -18,15 +18,15 @@
             'container'       => 'ul',
             'container_class' => '',
             'container_id'    => '',
-            'menu_class'      => 'main-nav__list js-list',
+            'menu_class'      => 'main-nav__list',
             'echo'            => true,
             'fallback_cb'     => 'wp_page_menu',
             'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
             'depth'           => 2
           ) );
         ?>
-        <ul class="main-nav__list js-list">
-          <ul class="main-nav__list js-list">
+
+          <ul class="main-nav__list">
           <li class="main-nav__item search search--menu">
             <form>
               <label class="search__item--menu-bg">

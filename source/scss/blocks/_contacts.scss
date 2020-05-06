@@ -1,0 +1,37 @@
+.contacts {
+  margin-top: 3rem;
+
+  @media (min-width: $desktop-lg-width) {
+    margin-top: 7rem;
+  }
+
+  &__title {
+    font-size: 1.875rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+  }
+
+  &__info {
+
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+
+    font-size: 1.125rem;
+  }
+
+  &__text {
+    display: block;
+    margin-left: 1.25rem;
+
+    font-size: 1.125rem;
+
+    &--phone {
+      font-weight: 100;
+      font-family: $montserratAlternates;
+    }
+  }
+}

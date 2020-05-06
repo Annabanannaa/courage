@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="page-main js-page-main"
-      style="background-image:url(<?php echo get_template_directory_uri(); ?>/source/img/fon-main.png)">
+      style="background-image:url(<?php the_sub_field('fon'); ?>)">
   <div class="container page-main__content js-container">
     <?php get_template_part('tmpl/menu'); ?>
 
@@ -145,11 +145,11 @@
           <div class="callboard__wrapper swiper-wrapper">
 
             <?php
-              foreach ($posts as $post):
+              foreach ($posts as  $key => $post):
                 setup_postdata($post);
                 ?>
 
-                <div class="callboard__slide swiper-slide">
+                <div class="callboard__slide swiper-slide js-callboard-slide" data-index="<?php echo $key?> " data-test="<?php the_permalink(); ?>">
                   <?php
                     $image = get_field('izobrazhenie_afishi');
 

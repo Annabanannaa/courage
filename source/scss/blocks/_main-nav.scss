@@ -8,7 +8,21 @@
   }
 
   &__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+
+    padding: 0 1.437rem 1.437rem;
+    background: #131212;
+    width: 100%;
+
+
     @media (min-width: $tablet-width) {
+      position: relative;
+
+      background: none;
+      padding: 0;
       margin-top: 0;
     }
 
@@ -52,22 +66,6 @@
 
   &__list {
     @include reset-list;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 9;
-
-    padding: 0 1.437rem 1.437rem;
-    background: #131212;
-    width: 100%;
-
-    @media (min-width: $desktop-lg-width) {
-      position: relative;
-
-      background: none;
-      padding: 0;
-    }
   }
 
   &__item {

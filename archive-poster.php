@@ -41,20 +41,20 @@
         <div class="poster-page__wrapper">
           <h1 class="poster-page__title">Афиша</h1>
           <form class="search poster-page__search">
-            <div class="search__item search__wrapper">
-              <select class="search__list js-select" name="city">
+            <div class="search__wrapper poster-page__search-wrap">
+              <select class="search__list poster-page__list" name="city">
                 <option class="search__element" selected disabled>Город</option>
                 <option class="search__element" value="t1">Москва</option>
                 <option class="search__element" value="t2">Чебоксары</option>
               </select>
 
-              <select class="search__list js-select" name="date">
+              <select class="search__list poster-page__list" name="date">
                 <option class="search__element" selected disabled>Дата</option>
                 <option class="search__element" value="t1">1</option>
                 <option class="search__element" value="t2">2</option>
               </select>
 
-              <select class="search__list js-select" name="event">
+              <select class="search__list poster-page__list" name="event">
                 <option class="search__element" selected disabled>Тип события</option>
                 <option class="search__element" value="t1">1</option>
                 <option class="search__element" value="t2">2</option>
@@ -65,34 +65,44 @@
 
         <div class="poster-page__wrap">
 
-          <?php if( have_posts() ): while( have_posts() ): the_post(); ?>
+          <?php if (have_posts()): while (have_posts()): the_post(); ?>
 
             <div class="poster-page__item">
+              <span class="poster-page__events">Концерты</span>
               <a class="" href="<?php the_permalink(); ?>">
                 <?php
-                  $image =  get_field('izobrazhenie_afishi');
+                  $image = get_field('izobrazhenie_afishi');
 
-                  echo wp_get_attachment_image( $image, '540x340', false, array(
+                  echo wp_get_attachment_image($image, '210x261', false, array(
                     'class' => 'img-fluid',
                   ));
                 ?>
               </a>
+
               <div class="poster-page__date">
+                <?php if (get_field('sobytie')): ?>
+                <?php while (has_sub_field('sobytie')): ?>
                 <?php $date = get_sub_field_object('date');
-
+                  $array = $date['name'];
+                  if ($array === 'sobytie_0_date'):
                   $date = $date['value'];
-                  $date = explode(" ", $date);
-                ?>
+                  $date = explode(" ", $date); ?>
 
-                <span class="date__number"><?php echo $date['0'] ?></span>
-                <span class="date__month"><?php echo $date['1'] ?></span>
+                <span class="poster-page__number"><?php echo $date['0'] ?> <?php echo $date['1'] ?></span>
+                <span class="poster-page__price"><?php the_field('price'); ?>₽</span>
               </div>
+
               <a class="poster-page__link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+             <span class="poster-page__city"><?php the_sub_field('gorod'); ?></span>
+
+              <?php endif; ?>
+              <?php endwhile; ?>
+              <?php endif; ?>
             </div>
-          <?php endwhile; endif; wp_reset_postdata(); ?>
+          <?php endwhile; endif;
+            wp_reset_postdata(); ?>
         </div>
       </div>
-
 
 
     </div>
