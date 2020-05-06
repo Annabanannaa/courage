@@ -1,0 +1,25 @@
+.button {
+  display: inline-block;
+  border: none;
+  padding: 0.812rem 0.88rem .75rem;
+
+  font-size: .875rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &--orange {
+    color: $text-yellow;
+    border: 1px solid $text-yellow;
+  }
+
+  &--white {
+    color: $text-grey;
+    border: 1px solid $text-grey;
+  }
+}
+

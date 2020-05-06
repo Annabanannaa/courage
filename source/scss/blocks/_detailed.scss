@@ -1,0 +1,88 @@
+.detailed {
+  transition: all 0.7s;
+
+  &__info {
+    margin-top: 1rem;
+  }
+
+  &__item {
+    margin-bottom: 1.1rem;
+
+    font-size: 1.187rem;
+  }
+
+  &__share {
+    margin-top: 3rem;
+  }
+
+  &__social {
+    margin-top: 1rem;
+  }
+
+  &__btn {
+    position: relative;
+    padding: 0.512rem 0.88rem .35rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+
+      display: block;
+      background-repeat: no-repeat;
+    }
+
+    & + & {
+      margin-left: .5rem;
+
+      @media (min-width: $tablet-width) {
+        margin-left: 1rem;
+      }
+    }
+
+    &--facebook {
+      padding-left: 1.5rem;
+
+      &::before {
+        height: 12px;
+        width: 6px;
+        background-image:  url("../img/facebook.png");
+      }
+    }
+
+    &--vk {
+      padding-left: 2rem;
+
+      &::before {
+        top: 11px;
+        height: 7px;
+        width: 11px;
+        background-image:  url("../img/vk-item.png");
+      }
+    }
+
+    &--twitter {
+      padding-left: 2rem;
+
+      &::before {
+        top: 10px;
+        height: 9px;
+        width: 11px;
+        background-image:  url("../img/twitter.png");
+      }
+    }
+  }
+
+  &--closed {
+    margin: 0;
+    height: 0;
+
+    opacity:0;
+    visibility: hidden;
+  }
+
+  &--opened {
+    opacity:1;
+    visibility: visible;
+  }
+}

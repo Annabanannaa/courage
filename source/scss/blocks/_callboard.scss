@@ -1,0 +1,132 @@
+.callboard {
+  position: relative;
+
+  padding: 4rem 1rem 4rem 2.5rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  background-color: #000;
+
+  transition: all 0.5s;
+
+  @media(min-width: $tablet-width) {
+    margin-left: -2.28rem;
+    margin-right: -2.28rem;
+    padding: 1.937rem 1rem 2.5rem;
+    background: transparent;
+  }
+
+  @media(min-width: $desktop-lg-width) {
+    padding: 1.937rem 0 1.5rem 2.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: auto;
+  }
+
+  &--closed {
+    padding: 0;
+    margin: 0;
+    height: 0;
+
+    display: none;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+
+    height: 100%;
+    width: 200%;
+
+    background-color: rgba(#000, .3);
+  }
+
+  &__container {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+
+    @media (min-width: $tablet-width) {
+      max-height: 500px;
+    }
+  }
+
+  &__desc {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+  }
+
+  &__city {
+    display: block;
+    margin-top: .3rem;
+
+    font-size: 1.125rem;
+    color: $light-black;
+  }
+
+  &__date {
+    display: flex;
+
+    font-family: $montserratAlternates;
+    font-weight: 200;
+    font-size: 1.875rem;
+  }
+
+  &__month {
+    margin-left: .5rem;
+
+    font-family: "AlegreyaSans";
+    font-size: 1.125rem;
+  }
+
+  &__slide {
+    display: flex;
+
+    max-height: 109px;
+    margin-bottom: 1.5rem;
+
+    @media(min-width: $tablet-width) {
+      max-height: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &__next {
+    position: absolute;
+    top: 22px;
+    right: calc(50% - 0.87px);
+
+    width: 1.75rem;
+
+    @media(min-width: $tablet-width) {
+      width: .75rem;
+      height: 1.06rem;
+      bottom: 1.06rem;
+      right: 1.5rem;
+      top: auto;
+    }
+  }
+
+  &__prev {
+    position: absolute;
+    bottom: 22px;
+    right: calc(50% - 0.87px);
+
+    width: 1.75rem;
+
+    @media(min-width: $tablet-width) {
+      height: 1.06rem;
+      bottom: 1.06rem;
+      right: 4rem;
+
+      width: .75rem;
+    }
+  }
+}

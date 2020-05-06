@@ -1,0 +1,29 @@
+{
+  "name": "courage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "9.5.x",
+    "gulp": "4.0.x",
+    "gulp-csso": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "8.0.x",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "4.0.x",
+    "gulp-sourcemaps": "2.6.x"
+  },
+  "dependencies": {
+    "csso": "^4.0.3",
+    "postcss": "^7.0.29",
+    "rename": "^1.0.4",
+    "select2": "^4.0.13",
+    "source-map": "^0.7.3",
+    "swiper": "^5.3.7"
+  }
+}

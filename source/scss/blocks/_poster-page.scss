@@ -1,0 +1,44 @@
+.poster-page {
+  margin-top: 6rem;
+
+  &__title {
+    flex: 0 0 calc(50% - 2rem);
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 200;
+  }
+
+  &__search {
+    flex: 0 0 calc(43% - 1rem);
+    padding: 0 2rem;
+    margin-top: 0;
+    height: 2.5rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  &__item {
+    flex: 0 0 calc(25% - 1rem);
+  }
+
+  &__link {
+    display: block;
+    color: $white;
+    font-size: 1.25rem;
+  }
+
+  &__date {
+
+  }
+}

@@ -1,0 +1,21 @@
+.page-main {
+  display: block;
+  min-height: 100vh;
+
+  background: $black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--poster {
+    background:#191212;
+}
+
+  &__content {
+    min-height: 100vh;
+
+    @media (min-width: $desktop-lg-width) {
+      display: flex;
+    }
+  }
+}

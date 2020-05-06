@@ -1,0 +1,21 @@
+@import "global/normalize";
+@import "global/mixins";
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/visually-hidden";
+
+@import "blocks/button";
+@import "blocks/container";
+@import "blocks/menu";
+@import "blocks/page-main";
+@import "blocks/main-nav";
+@import "blocks/page-event";
+@import "blocks/search";
+@import "blocks/wrapper";
+@import "blocks/date";
+@import "blocks/callboard";
+@import "blocks/desc-page";
+@import "blocks/detailed";
+@import "blocks/poster-page";
+@import "blocks/footer";

@@ -1,0 +1,22 @@
+.select2-container {
+  &--default {
+    .select2-selection {
+      &--single {
+        display: flex;
+        justify-content: flex-start;
+        background-color: transparent;
+        border: none;
+      }
+
+      .select2-selection {
+        &__rendered {
+          color: $text-grey;
+        }
+      }
+    }
+  }
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  //display: flex;
+  position: relative;
+}

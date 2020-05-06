@@ -1,0 +1,11 @@
+.wrapper {
+  @media (min-width: $desktop-lg-width) {
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    min-height: 100vh;
+    width: calc(100% - 180px - 47px);
+    flex: 0 0 calc(100% - 180px - 47px);
+    margin-left: 2.9rem;
+  }
+}

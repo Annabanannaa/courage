@@ -1,0 +1,74 @@
+.date {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 4rem;
+
+  transition: all 0.7s;
+
+  &--closed {
+    height: 0;
+    margin-top: 0;
+    opacity:0;
+    visibility: hidden;
+  }
+
+  &--opened {
+    opacity:1;
+    visibility: visible;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 2rem;
+  }
+
+  &__number {
+    font-family: "MontserratAlternates";
+    font-weight: 100;
+    font-size: 2.5rem;
+
+    @media(min-width: $desktop-lg-width) {
+      font-size: 3.68rem;
+    }
+  }
+
+  &__month {
+    position: relative;
+
+    display: block;
+    font-size: 1.06rem;
+    margin-bottom: .3rem;
+
+    @media(min-width: $desktop-lg-width) {
+      margin-bottom: .5rem;
+
+      font-size: 1.56rem;
+    }
+
+    &::after {
+      content: url("");
+      display: block;
+      height: 1px;
+      width: 2rem;
+      margin-top: 7px;
+
+      background-color: $text-grey;
+
+      @media(min-width: $desktop-lg-width) {
+        width: 2.5rem;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &__city {
+    font-size: .812rem;
+
+    @media(min-width: $desktop-lg-width) {
+      font-size: 1.18rem;
+    }
+  }
+}

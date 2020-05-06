@@ -1,0 +1,33 @@
+.footer {
+  margin: 0 -1rem;
+  background-color: #1B1814;
+  padding: 1.5rem 1rem 1.5rem;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    @media(min-width: $tablet-width) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__link {
+    font-size: .95rem;
+    color: $text-grey;
+  }
+
+  &__phone {
+    font-size: .875rem;
+    font-family: $montserratAlternates;
+    margin-right: 1rem;
+  }
+
+  &__social {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-lg-width) {
+    display: none;
+  }
+}
