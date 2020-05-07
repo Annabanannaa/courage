@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<main class="page-main js-page-main">
+<main class="page-main js-page-main"
+      style="background-image:url(<?php the_sub_field('fon'); ?>)">
   <div class="container page-main__content js-container">
     <?php get_template_part('tmpl/menu'); ?>
 
@@ -117,7 +118,7 @@
                 setup_postdata($post);
                 ?>
 
-                <div class="callboard__slide swiper-slide">
+                <div class="callboard__slide swiper-slide js-callboard-slide" data-index="<?php echo $key?> " data-url="<?php the_permalink(); ?>">
                   <?php
                     $image = get_field('izobrazhenie_afishi');
 
