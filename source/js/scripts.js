@@ -101,7 +101,5 @@ $(document).ready(function () {
     $(".page-event__text").toggleClass("page-event__text--closed page-event__text--opened");
     $(".page-event__btn").toggleClass("page-event__btn--closed page-event__btn--opened");
   });
-
-// добалвяем класс в меню a
-  $('.js-list ul li a').addClass('main-nav__link');
+  
 });

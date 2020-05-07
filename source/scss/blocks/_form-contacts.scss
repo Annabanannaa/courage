@@ -97,6 +97,8 @@
   &__add-file {
     font-size: 1.25rem;
 
+    cursor: pointer;
+
     &::before {
       content: " ";
       position: absolute;

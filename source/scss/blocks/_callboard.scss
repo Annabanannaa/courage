@@ -92,6 +92,8 @@
     max-height: 109px;
     margin-bottom: 1.5rem;
 
+    cursor: pointer;
+
     @media(min-width: $tablet-width) {
       max-height: auto;
       margin-bottom: 0;
@@ -100,14 +102,18 @@
 
   &__next {
     position: absolute;
+    z-index: 10;
     top: 22px;
     right: calc(50% - 0.87px);
 
+    padding: .5rem .5rem;
     width: 1.75rem;
 
+    cursor: pointer;
+
     @media(min-width: $tablet-width) {
-      width: .75rem;
-      height: 1.06rem;
+      width: 1.75rem;
+      height: 1.76rem;
       bottom: 1.06rem;
       right: 1.5rem;
       top: auto;
@@ -116,17 +122,21 @@
 
   &__prev {
     position: absolute;
+    z-index: 10;
     bottom: 22px;
     right: calc(50% - 0.87px);
 
+    padding: .5rem .5rem;
     width: 1.75rem;
 
+    cursor: pointer;
+
     @media(min-width: $tablet-width) {
-      height: 1.06rem;
       bottom: 1.06rem;
       right: 4rem;
 
-      width: .75rem;
+      height: 1.76rem;
+      width: 1.75rem;
     }
   }
 }
