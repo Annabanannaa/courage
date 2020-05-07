@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-<main class="page-main js-page-main"
-      style="background-image:url(<?php the_sub_field('fon'); ?>)">
+<main class="page-main js-page-main">
   <div class="container page-main__content js-container">
     <?php get_template_part('tmpl/menu'); ?>
 
@@ -53,9 +52,7 @@
                   <div class="page-event__title"><?php the_field('title'); ?></div>
 
                   <div>
-                    <p class="test top page-event__desc page-event__desc--opened">Симфонический оркестр под управлением
-                      Игоря&nbsp;Пономаренко</p>
-                    <div class="test bottom page-event__text page-event__text--closed">
+                    <div class="test bottom page-event__text page-event__text--opened">
                       <p>Новая программа Ирины Круг «Ты сердце и душа» не оставит равнодушным ни одного зрителя. Это
                         концерт
                         ярких, популярных, теплых, искренних и душевных песен, находящих отклик в сердцах тысячей людей.
@@ -67,39 +64,10 @@
 
                   <div class="page-event__block-btn">
                     <button class="button button--orange page-event__btn" type="button">Купить билеты онлайн</button>
-                    <button class="button button--white page-event__btn js-btn page-event__btn--opened" type="button">
-                      Подробнее
-                    </button>
-                    <button
-                      class="button button--white page-event__btn js-btn page-event__btn--closed page-event__btn--back"
-                      type="button"></button>
                   </div>
                 </section>
 
-                <section class="date date--opened">
-
-                  <?php if (get_field('sobytie')): ?>
-                    <?php while (has_sub_field('sobytie')): ?>
-
-                      <div class="date__item">
-
-                        <?php $date = get_sub_field_object('date');
-
-                          $date = $date['value'];
-                          $date = explode(" ", $date);
-                        ?>
-
-                        <span class="date__number"><?php echo $date['0'] ?></span>
-                        <span class="date__month"><?php echo $date['1'] ?></span>
-                        <span class="date__city"><?php the_sub_field('gorod'); ?></span>
-                      </div>
-
-                    <?php endwhile; ?>
-                  <?php endif; ?>
-
-
-                </section>
-                <div class="detailed detailed--closed">
+                <div class="detailed detailed--opened">
                   <div class="detailed__info">
                     <?php if (get_field('sobytie')): ?>
                       <?php while (has_sub_field('sobytie')): ?>
@@ -139,7 +107,7 @@
         </div>
       </div>
 
-      <section class="callboard callboard--opened">
+      <section class="callboard callboard--closed">
         <div class="callboard__bg"></div>
         <div class="callboard__container js-callboard-thumbs">
           <div class="callboard__wrapper swiper-wrapper">
@@ -149,13 +117,11 @@
                 setup_postdata($post);
                 ?>
 
-                <div class="callboard__slide swiper-slide js-callboard-slide" data-index="<?php echo $key?> " data-test="<?php the_permalink(); ?>">
+                <div class="callboard__slide swiper-slide">
                   <?php
                     $image = get_field('izobrazhenie_afishi');
 
-                    echo wp_get_attachment_image($image, '88x109', false, array(
-                      'class' => 'img-fluid',
-                    ));
+                    echo wp_get_attachment_image($image, '88x109', false);
                   ?>
                   <div class="callboard__desc">
 
@@ -184,23 +150,6 @@
 
               <?php endforeach; ?>
 
-          </div>
-          <!-- Add Pagination -->
-          <div class="callboard__next">
-            <picture>
-              <source media="(min-width: 584px)"
-                      srcset="<?php echo get_template_directory_uri(); ?>/source/img/next.svg">
-              <img src="<?php echo get_template_directory_uri(); ?>/source/img/top.svg">
-            </picture>
-            <!--            <svg width="12" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.515 16.815L12 8.407 1.515 0 .528 1.23 9.48 8.407.528 15.585l.987 1.23z" fill="#FBFDFF"/></svg>-->
-          </div>
-          <div class="callboard__prev">
-            <picture>
-              <source media="(min-width: 584px)"
-                      srcset="<?php echo get_template_directory_uri(); ?>/source/img/prev.svg">
-              <img src="<?php echo get_template_directory_uri(); ?>/source/img/bottom.svg">
-            </picture>
-            <!--            <svg width="12" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.485 16.815L0 8.407 10.485 0l.987 1.23L2.52 8.407l8.952 7.178-.987 1.23z" fill="#fff"/></svg>-->
           </div>
 
         </div>

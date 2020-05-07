@@ -25,7 +25,7 @@ $(document).ready(function () {
       prevEl: '.callboard__prev',
     },
   });
-  console.log($('.js-desc-page'));
+
   if ($('.js-desc-page').length) {
     // фон афиши
     var galleryTop = new Swiper('.js-desc-page', {
@@ -45,19 +45,15 @@ $(document).ready(function () {
 
       on: {
         slideChange: function () {
-
           // выбор картинки со слайда на фон
-
-          history.pushState('','', $('.js-callboard-slide').get(this.activeIndex).dataset.test)
           $('.js-page-main').css('background-image', 'url(' + $(".js-desc-page-item").get(this.activeIndex).dataset.imgPath + ')');
         },
       },
     });
 
-    galleryTop.slideTo($('[data-test="' + window.location + '"]').data('index'))
+    $('.js-page-main').css('background-image', 'url(' + $(".js-desc-page-item").get(0).dataset.imgPath + ')');
+    galleryTop.slideTo($('[data-url="' + window.location + '"]').data('index'))
   }
-
-
 
   // меню мобила
   function resize() {
