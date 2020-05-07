@@ -1,7 +1,15 @@
 .desc-page {
   height: auto;
   width: 100%;
-  margin-bottom: 3rem;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    width: 50%;
+  }
 
   &__slider {
     &:not(.swiper-slide-active) {

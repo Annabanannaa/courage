@@ -40,7 +40,7 @@
       </form>
 
       <div class="desc-page swiper-container js-desc-page">
-        <div class="desc-page-wrapper swiper-wrapper">
+        <div class="desc-page__wrapper swiper-wrapper">
 
           <?php
             foreach ($posts as $post):
