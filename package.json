@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "csso": "^4.0.3",
-    "postcss": "^7.0.29",
+    "postcss": "^8.2.10",
     "rename": "^1.0.4",
     "select2": "^4.0.13",
     "source-map": "^0.7.3",
